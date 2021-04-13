@@ -23,7 +23,7 @@ input_df <- dplyr::select(nearest_gene_info, rsid=query, Gene.symbol=gene) %>%
 	filter(!is.na(Gene.symbol)) %>%
 	inner_join(
 		.,
-		dplyr::select(a, rsid, logFC = beta, adj.P.Val=pvalue),
+		dplyr::select(a, rsid, adj.P.Val=pvalue),
 		by="rsid"
 	) %>%
 	dplyr::select(-c(rsid)) %>%
