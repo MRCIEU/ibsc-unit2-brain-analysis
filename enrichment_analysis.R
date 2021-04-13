@@ -2,9 +2,6 @@ library(ieugwasr)
 library(tidyverse)
 library(pathfindR)
 
-# Download braingwasresults.csv from:
-# https://uob.sharepoint.com/:x:/t/grp-ibsc-unit2/EYBamY6WCtFOiWK1LtlDidsBbXJWqTLVOX7nbXPSy3uGdQ?e=nvpFBd
-
 a <- read.csv("braingwasresults.csv")
 
 nearest_gene_info <- unique(a$rsid) %>%
